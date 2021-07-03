@@ -6,6 +6,8 @@ use App\Repositories\CategoryRepository;
 use App\Repositories\CategoryRepositoryInterface;
 use App\Repositories\CommentRepository;
 use App\Repositories\CommentRepositoryInterface;
+use App\Repositories\MessageRepository;
+use App\Repositories\MessageRepositoryInterface;
 use App\Repositories\PageRepository;
 use App\Repositories\PageRepositoryInterface;
 use App\Repositories\PostRepository;
@@ -28,6 +30,7 @@ class RepositoriesServiceProvider extends ServiceProvider
         $this->app->bind(CategoryRepositoryInterface::class, CategoryRepository::class);
         $this->app->bind(PageRepositoryInterface::class, PageRepository::class);
         $this->app->bind(CommentRepositoryInterface::class, CommentRepository::class);
+        $this->app->bind(MessageRepositoryInterface::class, MessageRepository::class);
 
     }
 

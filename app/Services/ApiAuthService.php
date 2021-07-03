@@ -21,7 +21,9 @@ class ApiAuthService
     {
         $this->repo = $repo;
     }
-
+    public function getAuthenticatedUser(){
+        return $this->repo->show(Auth()->user()->id);
+    }
     public function loginUser($data){
         if(Auth::attempt(['email' => $data['email'], 'password' => $data['password']])){
             $user = $this->repo->getUser($data['email']);

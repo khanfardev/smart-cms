@@ -24,7 +24,7 @@ class UserRepository implements UserRepositoryInterface
     }
     public function show($user)
     {
-        return $user;
+        return $this->user->find($user);
     }
 
     public function store($data)
